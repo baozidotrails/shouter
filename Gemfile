@@ -13,3 +13,6 @@ gem 'spring',        group: :development
 
 # User authentication
 gem 'monban-generators'
+
+# Bootstrap framework
+gem 'bootstrap-sass'
