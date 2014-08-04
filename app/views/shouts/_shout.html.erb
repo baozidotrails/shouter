@@ -1,0 +1,10 @@
+<%= div_for shout do %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= shout.user.username %></h3>
+    </div>
+    <div class="panel-body">
+      <%= shout.body %>
+    </div>
+  </div>
+<% end %>

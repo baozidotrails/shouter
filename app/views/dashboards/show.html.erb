@@ -1,1 +1,6 @@
-<h2>Dashboard</h2>
+<%= form_for @shout do |f| %>
+  <%= f.text_field :body, placeholder: 'Shout content here' %>
+  <%= f.submit "Submit", disable_with: 'Submiting...' %>
+<% end %>
+
+<%= render @shouts %>
