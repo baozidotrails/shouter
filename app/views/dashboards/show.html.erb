@@ -1,6 +1,10 @@
 <%= form_for @shout do |f| %>
   <%= f.text_field :body, placeholder: 'Shout content here' %>
-  <%= f.submit "Submit", disable_with: 'Submiting...' %>
+  <%= f.submit "Submit", data: { disable_with: 'Submiting...' } %>
+<% end %>
+
+<% if alert %>
+  <div class="alert alert-danger" role="alert"><%= alert %></div>
 <% end %>
 
 <%= render @shouts %>

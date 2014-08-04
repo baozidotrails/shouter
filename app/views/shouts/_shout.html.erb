@@ -1,10 +1,17 @@
 <%= div_for shout do %>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><%= shout.user.username %></h3>
+      <h3 class="panel-title"><%= link_to shout.user.username, shout.user %> shouted at <%= link_to time_ago_in_words(shout.created_at), shout %></h3>
     </div>
     <div class="panel-body">
-      <%= shout.body %>
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" src="..." alt="...">
+        </a>
+        <div class="media-body">
+          <%= shout.body %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
