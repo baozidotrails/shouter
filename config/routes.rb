@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  root 'pages#home', via: :get
+
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
