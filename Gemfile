@@ -16,3 +16,6 @@ gem 'monban-generators'
 
 # Bootstrap framework
 gem 'bootstrap-sass'
+
+# File uploader
+gem 'paperclip'

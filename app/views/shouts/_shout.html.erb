@@ -6,10 +6,14 @@
     <div class="panel-body">
       <div class="media">
         <a class="pull-left" href="#">
-          <img class="media-object" src="..." alt="...">
+          <%# media-object %>
+          <%= gravatar shout.user %>
         </a>
         <div class="media-body">
-          <%= shout.body %>
+          <%# render the specific instance to its current view directory, file name witg a _ preposition. %>
+          <%# the reason why it "specific" is our shout model has polymorphic %>
+          <%# http://www.cnblogs.com/lwm-1988/archive/2011/09/13/2175041.html %>
+          <%= render shout.content %>
         </div>
       </div>
     </div>
