@@ -5,7 +5,7 @@ class PhotoShoutsController < ApplicationController
     if shout.save
       redirect_to dashboard_path
     else
-      flash.alert = "Could not shout."      
+      flash[:danger] = "Could not shout."
       redirect_to dashboard_path
     end
   end

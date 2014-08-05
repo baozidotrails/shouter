@@ -1,16 +1,12 @@
-<%= form_for @text_shout do |f| %>
+<%= form_for @dashboard.new_text_shout do |f| %>
   <%= f.text_field :body, placeholder: 'Shout content here' %>
   <%= f.submit "Submit", data: { disable_with: 'Submiting...' } %>
 <% end %>
 
-<%= form_for @photo_shout do |f| %>
+<%= form_for @dashboard.new_photo_shout do |f| %>
   <%= f.file_field :image %>
   <%= f.submit "Submit", data: { disable_with: 'Submiting...' } %>
 <% end %>
 
-<% if alert %>
-  <div class="alert alert-danger" role="alert"><%= alert %></div>
-<% end %>
-
-<%# 把 Dashboard controller 的 @shouts（也就是 Shout.all）傳到 app/view/shouts/_shout.html.erb %>
-<%= render @shouts %>
+<%# Will render timeline to timelines/_timeline.html.erb %>
+<%= render @dashboard.timeline %>
