@@ -19,3 +19,7 @@ gem 'bootstrap-sass'
 
 # File uploader
 gem 'paperclip'
+
+# Search
+gem 'sunspot_rails'
+gem 'sunspot_solr'
