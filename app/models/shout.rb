@@ -18,4 +18,7 @@ class Shout < ActiveRecord::Base
   #   end
   #   content
   # }
+  def self.text_shouts
+    where(content_type: 'TextShout')
+  end
 end
